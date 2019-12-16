@@ -36,7 +36,7 @@ $(document).ready(function () {
     });
 });
 
-//hämtar information via interna apiet och skriver ut det i en lista
+//hämtar information via interna apiet och skriver ut det i en lista//
 function getData() {
     $.ajax({
         type: "GET",
