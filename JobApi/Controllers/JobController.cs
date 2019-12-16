@@ -25,10 +25,10 @@ namespace JobApi.Controllers
 
             if (_context.JobItems.Count() == 0)
             {
-                //Hämtar data från AF begränsad till 75 träffar
-                string apiUrl = "https://jobsearch.api.jobtechdev.se/search?q=Hudiksvall&offset=0&limit=75";
+                //Hämtar data från AF begränsad till 100 träffar
+                string apiUrl = "https://jobsearch.api.jobtechdev.se/search?q=Hudiksvall&offset=0&limit=100";
 
-                HttpWebRequest getRequest = (HttpWebRequest)WebRequest.Create(apiUrl);
+                 HttpWebRequest getRequest = (HttpWebRequest)WebRequest.Create(apiUrl);
                 getRequest.Method = "GET"; // Använder get metod för att hämta data
                 getRequest.Headers.Add("api-key", "YiJcXFx4YWJRXHgwZSxuPlx4OGZceGQ5XHgwOEFDXHg4M3NdXHg5MSMnXHhiZnYi"); //Sätt in egen nyckel för api
                 HttpWebResponse responseGet = (HttpWebResponse)getRequest.GetResponse();
@@ -50,7 +50,7 @@ namespace JobApi.Controllers
                     var data = readStream.ReadToEnd();
 
                     var jobObj = JObject.Parse(data);
-                    for (int y = 0; y < 75; y++)
+                    for (int y = 0; y < 100; y++)
                     {
                         var title = jobObj["hits"][y]["headline"].ToString();
                         var dateEnd = DateTime.Parse(jobObj["hits"][y]["application_deadline"].ToString());
