@@ -41,39 +41,13 @@
     background-color: rgba(255,255,255,0.9);
     position: fixed;
     left: 25%;
-    top: 15%;
+    top: 5%;
     right: 25%;
-    bottom: 15%;
+    bottom: 5%;
     overflow-y: auto;
-    padding: 1em 2em;
+    padding: 0.5em 1em;
     white-space: pre-wrap;
-    /*border-radius: 0.3em;*/
-}
-
-/*-----LAB-----*/
-#view1 {
-    display: none;
-    z-index: 3;
-    background-color: rgba(255,255,255,0.9);
-    position: fixed;
-    left: 25%;
-    top: 15%;
-    right: 25%;
-    bottom: 15%;
-    overflow-y: auto;
-    padding: 1em 2em;
-    white-space: pre-wrap;
-    /*border-radius: 0.3em;*/
-}
-
-#view p {
-    white-space: -moz-pre-wrap;
-    Firefox white-space: -pre-wrap;
-    ancient Opera white-space: -o-pre-wrap;
-    newer Opera white-space: pre-wrap;
-    Chrome;
-    W3C standard word-wrap: break-word;
-    IE
+    border-radius: 0.3em;
 }
 
 table {
@@ -88,8 +62,6 @@ th {
     color: white;
     padding: 1em 1em;
     text-align: left;
-    /*border-top-left-radius: 1.5em;
-    border-top-right-radius: 1.5em;*/
 }
 
 td {
@@ -131,7 +103,6 @@ tr {
     }
 
     .start p {
-        /*position: absolute;*/
         bottom: 0;
         right: 1em;
         font-size: 300%;
@@ -152,7 +123,7 @@ tr {
     .searchBtn img {
         width: 140%;
         height: auto;
-        padding: auto;
+        padding: initial;
     }
 
     .searchBtn:hover, .closeBtn:hover {
@@ -178,7 +149,7 @@ tr {
     background-color: rgb(128, 128, 128);
     position: fixed;
     top: 8%;
-    right: 26%;
+    right: 27%;
     border: 2px solid rgba(255,255,255,0.9);
 }
 
@@ -221,64 +192,3 @@ tr {
     float: left;
     width: 100%;
 }
-
-/***************************/
-/* Grid	desktop:		   */
-/***************************/
-/*@media only screen and (min-width: 1180px) {
-    .col-1-12 {
-        width: 8.33%;
-    }
-
-    .col-2-12 {
-        width: 16.66%;
-    }
-
-    .col-3-12 {
-        width: 25%;
-    }
-
-    .col-4-12 {
-        width: 33.33%;
-    }
-
-    .col-5-12 {
-        width: 41.66%;
-    }
-
-    .col-6-12 {
-        width: 50%;
-    }
-
-    .col-7-12 {
-        width: 58.33%;
-    }
-
-    .col-8-12 {
-        width: 66.66%;
-    }
-
-    .col-9-12 {
-        width: 75%;
-    }
-
-    .col-10-12 {
-        width: 83.33%;
-    }
-
-    .col-11-12 {
-        width: 91.66%;
-    }
-
-    .col-calendar {
-        width: 14.28%;
-    }
-
-    .col-full {
-        width: 100%;
-    }
-
-    .navControl {
-        display: none;
-    }
-}*/
