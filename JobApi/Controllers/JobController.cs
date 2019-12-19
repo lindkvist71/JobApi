@@ -28,7 +28,7 @@ namespace JobApi.Controllers
                 //Hämtar data från AF begränsad till 100 träffar
                 string apiUrl = "https://jobsearch.api.jobtechdev.se/search?q=Hudiksvall&offset=0&limit=100";
 
-                 HttpWebRequest getRequest = (HttpWebRequest)WebRequest.Create(apiUrl);
+                HttpWebRequest getRequest = (HttpWebRequest)WebRequest.Create(apiUrl);
                 getRequest.Method = "GET"; // Använder get metod för att hämta data
                 getRequest.Headers.Add("api-key", "YiJcXFx4YWJRXHgwZSxuPlx4OGZceGQ5XHgwOEFDXHg4M3NdXHg5MSMnXHhiZnYi"); //Sätt in egen nyckel för api
                 HttpWebResponse responseGet = (HttpWebResponse)getRequest.GetResponse();
@@ -69,25 +69,11 @@ namespace JobApi.Controllers
                 }
             }
         }
-
         // GET: api/Job
         [HttpGet]
         public async Task<ActionResult<IEnumerable<JobItem>>> GetJobItems()
         {
             return await _context.JobItems.ToListAsync();
-        }
-
-        // GET: api/Job/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<JobItem>> GetJobItem(long id)
-        {
-            var jobItem = await _context.JobItems.FindAsync(id);
-
-            if (jobItem == null)
-            {
-                return NotFound();
-            }
-            return jobItem;
         }
     }
 }

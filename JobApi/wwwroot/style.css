@@ -1,6 +1,6 @@
 ﻿body {
     position: relative;
-    background-image: url("img/hudiksvall.jpg");
+    background-image: url("img/background.jpg");
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -46,16 +46,35 @@
     bottom: 15%;
     overflow-y: auto;
     padding: 1em 2em;
+    white-space: pre-wrap;
     /*border-radius: 0.3em;*/
 }
 
-    #view p {
-        white-space: -moz-pre-wrap;  Firefox 
-        white-space: -pre-wrap;  ancient Opera 
-        white-space: -o-pre-wrap;  newer Opera 
-        white-space: pre-wrap;  Chrome; W3C standard 
-        word-wrap: break-word;  IE 
-    }
+/*-----LAB-----*/
+#view1 {
+    display: none;
+    z-index: 3;
+    background-color: rgba(255,255,255,0.9);
+    position: fixed;
+    left: 25%;
+    top: 15%;
+    right: 25%;
+    bottom: 15%;
+    overflow-y: auto;
+    padding: 1em 2em;
+    white-space: pre-wrap;
+    /*border-radius: 0.3em;*/
+}
+
+#view p {
+    white-space: -moz-pre-wrap;
+    Firefox white-space: -pre-wrap;
+    ancient Opera white-space: -o-pre-wrap;
+    newer Opera white-space: pre-wrap;
+    Chrome;
+    W3C standard word-wrap: break-word;
+    IE
+}
 
 table {
     font-family: Calibri, sans-serif;
@@ -69,8 +88,8 @@ th {
     color: white;
     padding: 1em 1em;
     text-align: left;
-    border-top-left-radius: 1.5em;
-    border-top-right-radius: 1.5em;
+    /*border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;*/
 }
 
 td {
@@ -206,7 +225,7 @@ tr {
 /***************************/
 /* Grid	desktop:		   */
 /***************************/
-@media only screen and (min-width: 1180px) {
+/*@media only screen and (min-width: 1180px) {
     .col-1-12 {
         width: 8.33%;
     }
@@ -262,4 +281,4 @@ tr {
     .navControl {
         display: none;
     }
-}
+}*/

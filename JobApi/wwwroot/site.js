@@ -4,12 +4,12 @@ let jobs = null;
 //hämtar information via interna api om antal objekt som finns med i databasen
 function getCount(data) {
     const el = $("#counter");
-    let name = "jobb annonser";
+    let name = "lediga tjänster";
 
     //kontrollerar antalet annonser och skriver ut rätt ord / även om det inte finns några annonser
     if (data) {
         if (data <= 1) {
-            name = "aktiv annons";
+            name = "aktiv tjänst";
         }
         el.text("Just nu finns det " + data + " " + name + " i Hudiksvalls kommun.");
     } else {
@@ -88,6 +88,8 @@ function viewItem(id) {
 
     $("#overlay").css({ display: "block" });
     $("#view").css({ display: "block" });
+    $("#view").css({ display: "block" });
+
     $("body").css({ overflow: "hidden" });
 }
 
