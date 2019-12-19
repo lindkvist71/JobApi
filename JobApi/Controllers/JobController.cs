@@ -30,7 +30,7 @@ namespace JobApi.Controllers
 
                 HttpWebRequest getRequest = (HttpWebRequest)WebRequest.Create(apiUrl);
                 getRequest.Method = "GET"; // Använder get metod för att hämta data
-                getRequest.Headers.Add("api-key", "YiJcXFx4YWJRXHgwZSxuPlx4OGZceGQ5XHgwOEFDXHg4M3NdXHg5MSMnXHhiZnYi"); //Sätt in egen nyckel för api
+                getRequest.Headers.Add("api-key", "-------"); //Sätt in egen nyckel för api
                 HttpWebResponse responseGet = (HttpWebResponse)getRequest.GetResponse();
 
                 //Om allt är OK kommer den att fortsätta läsa in data
